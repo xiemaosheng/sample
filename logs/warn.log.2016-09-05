@@ -1,0 +1,177 @@
+2016-09-05 10:50:52  1731 [localhost-startStop-1] WARN  org.springframework.context.annotation.ConfigurationClassEnhancer:348  - @Bean method WebMvcConfig.getPropertyConfigurer is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2016-09-05 10:50:54  3453 [localhost-startStop-1] WARN  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:549  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongo' defined in class path resource [com/nd/config/MongoConfiguration.class]: Invocation of init method failed; nested exception is com.mongodb.MongoException: host and port should be specified in host:port format
+2016-09-05 10:50:54  3457 [localhost-startStop-1] ERROR org.springframework.web.servlet.DispatcherServlet:502  - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongo' defined in class path resource [com/nd/config/MongoConfiguration.class]: Invocation of init method failed; nested exception is com.mongodb.MongoException: host and port should be specified in host:port format
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:861)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:540)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: com.mongodb.MongoException: host and port should be specified in host:port format
+	at com.mongodb.ServerAddress.<init>(ServerAddress.java:95)
+	at org.springframework.data.mongodb.core.MongoClientFactoryBean.createConfiguredOrDefaultServerAddress(MongoClientFactoryBean.java:164)
+	at org.springframework.data.mongodb.core.MongoClientFactoryBean.createMongoClient(MongoClientFactoryBean.java:156)
+	at org.springframework.data.mongodb.core.MongoClientFactoryBean.createInstance(MongoClientFactoryBean.java:138)
+	at org.springframework.data.mongodb.core.MongoClientFactoryBean.createInstance(MongoClientFactoryBean.java:41)
+	at org.springframework.beans.factory.config.AbstractFactoryBean.afterPropertiesSet(AbstractFactoryBean.java:134)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 25 more
+2016-09-05 10:50:54  3458 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#76] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3458 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#72] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3458 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#84] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3458 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#74] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3458 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#87] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3458 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#88] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3458 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#83] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3458 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#96] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3458 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#95] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3458 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#91] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3458 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#80] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3458 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#77] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3458 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#90] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3458 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#85] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3457 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#78] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3457 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#86] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3457 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#98] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3457 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#93] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3457 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#92] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3457 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#97] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3457 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#79] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3457 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#89] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3457 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#70] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3457 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#73] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3457 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#75] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3457 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#94] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:50:54  3457 [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#71] WARN  com.mchange.v2.resourcepool.BasicResourcePool:1876  - com.mchange.v2.resourcepool.BasicResourcePool@691306b7 -- Thread unexpectedly interrupted while performing an acquisition attempt.
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2016-09-05 10:57:02  1792 [localhost-startStop-1] WARN  org.springframework.context.annotation.ConfigurationClassEnhancer:348  - @Bean method WebMvcConfig.getPropertyConfigurer is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2016-09-05 10:59:59  1776 [localhost-startStop-1] WARN  org.springframework.context.annotation.ConfigurationClassEnhancer:348  - @Bean method WebMvcConfig.getPropertyConfigurer is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.

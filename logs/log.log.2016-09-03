@@ -1,0 +1,444 @@
+2016-09-03 16:54:17  1    [localhost-startStop-1] ERROR com.alibaba.druid.pool.DruidDataSource:658  - dataSource init error
+java.sql.SQLException: ${jdbc.driver-class-name}
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:519)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:595)
+	at com.nd.config.WebMvcConfig.dataSource(WebMvcConfig.java:88)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$a4051d8a.CGLIB$dataSource$5(<generated>)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$a4051d8a$$FastClassBySpringCGLIB$$d95ae264.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$a4051d8a.dataSource(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:381)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$a4051d8a.dataSource(<generated>)
+	at com.nd.config.WebMvcConfig.entityManagerFactory(WebMvcConfig.java:101)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$a4051d8a.CGLIB$entityManagerFactory$3(<generated>)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$a4051d8a$$FastClassBySpringCGLIB$$d95ae264.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$a4051d8a.entityManagerFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:776)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:861)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:540)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: java.lang.ClassNotFoundException: ${jdbc.driver-class-name}
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1702)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1547)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:190)
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:517)
+	... 62 more
+2016-09-03 16:54:17  4    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 16:58:44  0    [localhost-startStop-1] ERROR com.alibaba.druid.pool.DruidDataSource:658  - dataSource init error
+java.sql.SQLException: ${jdbc.driver-class-name}
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:519)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:595)
+	at com.nd.config.WebMvcConfig.dataSource(WebMvcConfig.java:93)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$d9f5122.CGLIB$dataSource$0(<generated>)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$d9f5122$$FastClassBySpringCGLIB$$e2c32d9d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$d9f5122.dataSource(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:776)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:861)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:540)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: java.lang.ClassNotFoundException: ${jdbc.driver-class-name}
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1702)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1547)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:190)
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:517)
+	... 40 more
+2016-09-03 16:58:44  8    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 16:59:28  1    [ContainerBackgroundProcessor[StandardEngine[Tomcat]]] ERROR com.alibaba.druid.pool.DruidDataSource:658  - dataSource init error
+java.sql.SQLException: ${jdbc.driver-class-name}
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:519)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:595)
+	at com.nd.config.WebMvcConfig.dataSource(WebMvcConfig.java:93)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$be6062f0.CGLIB$dataSource$0(<generated>)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$be6062f0$$FastClassBySpringCGLIB$$6b459473.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$be6062f0.dataSource(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:776)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:861)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:540)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3954)
+	at org.apache.catalina.loader.WebappLoader.backgroundProcess(WebappLoader.java:426)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1345)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1530)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1540)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1540)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1519)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: java.lang.ClassNotFoundException: ${jdbc.driver-class-name}
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1702)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1547)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:190)
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:517)
+	... 42 more
+2016-09-03 16:59:28  4    [ContainerBackgroundProcessor[StandardEngine[Tomcat]]] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 16:59:40  0    [localhost-startStop-1] ERROR com.alibaba.druid.pool.DruidDataSource:658  - dataSource init error
+java.sql.SQLException: ${jdbc.driver-class-name}
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:519)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:595)
+	at com.nd.config.WebMvcConfig.dataSource(WebMvcConfig.java:93)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$1120b513.CGLIB$dataSource$0(<generated>)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$1120b513$$FastClassBySpringCGLIB$$c3a89743.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$1120b513.dataSource(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:776)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:861)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:540)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: java.lang.ClassNotFoundException: ${jdbc.driver-class-name}
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1702)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1547)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:190)
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:517)
+	... 40 more
+2016-09-03 16:59:40  5    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 17:04:31  0    [localhost-startStop-1] ERROR com.alibaba.druid.pool.DruidDataSource:658  - dataSource init error
+java.sql.SQLException: ${jdbc.driver-class-name}
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:519)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:595)
+	at com.nd.config.WebMvcConfig.dataSource(WebMvcConfig.java:93)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$97fd199e.CGLIB$dataSource$5(<generated>)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$97fd199e$$FastClassBySpringCGLIB$$9b99f240.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$97fd199e.dataSource(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:381)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$97fd199e.dataSource(<generated>)
+	at com.nd.config.WebMvcConfig.entityManagerFactory(WebMvcConfig.java:106)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$97fd199e.CGLIB$entityManagerFactory$3(<generated>)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$97fd199e$$FastClassBySpringCGLIB$$9b99f240.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at com.nd.config.WebMvcConfig$$EnhancerBySpringCGLIB$$97fd199e.entityManagerFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:776)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:861)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:540)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: java.lang.ClassNotFoundException: ${jdbc.driver-class-name}
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1702)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1547)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:190)
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:517)
+	... 62 more
+2016-09-03 17:04:31  8    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 17:09:09  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 17:10:02  53294 [http-bio-80-exec-3] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-2} inited
+2016-09-03 17:10:45  96192 [http-bio-80-exec-4] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-3} inited
+2016-09-03 17:14:35  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 17:15:47  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 17:17:04  0    [localhost-startStop-1] INFO  org.hibernate.annotations.common.Version:37  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-09-03 17:17:04  6    [localhost-startStop-1] INFO  org.hibernate.Version:41  - HHH000412: Hibernate Core {4.2.21.Final}
+2016-09-03 17:17:04  9    [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:238  - HHH000206: hibernate.properties not found
+2016-09-03 17:17:04  10   [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:345  - HHH000021: Bytecode provider name : javassist
+2016-09-03 17:17:04  29   [localhost-startStop-1] INFO  org.hibernate.ejb.Ejb3Configuration:530  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-03 17:17:04  177  [localhost-startStop-1] WARN  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator:143  - HHH000181: No appropriate connection provider encountered, assuming application will be supplying connections
+2016-09-03 17:23:39  0    [localhost-startStop-1] INFO  org.hibernate.annotations.common.Version:37  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-09-03 17:23:39  7    [localhost-startStop-1] INFO  org.hibernate.Version:41  - HHH000412: Hibernate Core {4.2.21.Final}
+2016-09-03 17:23:39  9    [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:238  - HHH000206: hibernate.properties not found
+2016-09-03 17:23:39  10   [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:345  - HHH000021: Bytecode provider name : javassist
+2016-09-03 17:23:39  26   [localhost-startStop-1] INFO  org.hibernate.ejb.Ejb3Configuration:530  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-03 17:23:39  96   [localhost-startStop-1] WARN  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator:143  - HHH000181: No appropriate connection provider encountered, assuming application will be supplying connections
+2016-09-03 17:25:41  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 17:26:24  43457 [http-bio-80-exec-4] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-2} inited
+2016-09-03 17:27:07  86387 [http-bio-80-exec-6] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-3} inited
+2016-09-03 17:32:48  0    [localhost-startStop-1] INFO  org.hibernate.annotations.common.Version:37  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-09-03 17:32:48  6    [localhost-startStop-1] INFO  org.hibernate.Version:41  - HHH000412: Hibernate Core {4.2.21.Final}
+2016-09-03 17:32:48  7    [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:238  - HHH000206: hibernate.properties not found
+2016-09-03 17:32:48  9    [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:345  - HHH000021: Bytecode provider name : javassist
+2016-09-03 17:32:48  24   [localhost-startStop-1] INFO  org.hibernate.ejb.Ejb3Configuration:530  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-03 17:32:48  94   [localhost-startStop-1] WARN  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator:143  - HHH000181: No appropriate connection provider encountered, assuming application will be supplying connections
+2016-09-03 17:39:27  0    [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:121  - Before LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{}
+2016-09-03 17:39:27  102  [localhost-startStop-1] INFO  org.hibernate.annotations.common.Version:37  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-09-03 17:39:27  106  [localhost-startStop-1] INFO  org.hibernate.Version:41  - HHH000412: Hibernate Core {4.2.21.Final}
+2016-09-03 17:39:27  108  [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:238  - HHH000206: hibernate.properties not found
+2016-09-03 17:39:27  109  [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:345  - HHH000021: Bytecode provider name : javassist
+2016-09-03 17:39:27  125  [localhost-startStop-1] INFO  org.hibernate.ejb.Ejb3Configuration:530  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-03 17:39:27  196  [localhost-startStop-1] WARN  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator:143  - HHH000181: No appropriate connection provider encountered, assuming application will be supplying connections
+2016-09-03 17:51:00  1    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 17:54:22  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 19:50:16  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 19:51:24  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 19:53:06  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 19:58:40  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 20:04:31  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 20:15:11  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 20:24:37  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 20:26:35  117566 [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:79  - Before LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{}
+2016-09-03 20:26:43  126018 [localhost-startStop-1] INFO  org.hibernate.annotations.common.Version:37  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-09-03 20:26:43  126057 [localhost-startStop-1] INFO  org.hibernate.Version:41  - HHH000412: Hibernate Core {4.2.21.Final}
+2016-09-03 20:26:43  126078 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:238  - HHH000206: hibernate.properties not found
+2016-09-03 20:26:43  126085 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:345  - HHH000021: Bytecode provider name : javassist
+2016-09-03 20:26:43  126197 [localhost-startStop-1] INFO  org.hibernate.ejb.Ejb3Configuration:530  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-03 20:26:44  126701 [localhost-startStop-1] INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator:188  - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-09-03 20:27:48  190535 [localhost-startStop-1] WARN  com.alibaba.druid.pool.DruidDataSource:958  - not full timeout retry : 1
+2016-09-03 20:28:54  257014 [localhost-startStop-1] WARN  org.hibernate.engine.jdbc.internal.JdbcServicesImpl:169  - HHH000342: Could not obtain connection to query metadata : wait millis 60000, active 0, maxActive 20
+2016-09-03 20:29:24  286813 [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:1383  - {dataSource-1} closed
+2016-09-03 20:31:36  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 20:45:25  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 20:48:01  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 20:54:22  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 20:55:41  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 20:57:19  0    [localhost-startStop-1] INFO  com.alibaba.druid.pool.DruidDataSource:667  - {dataSource-1} inited
+2016-09-03 21:16:41  0    [localhost-startStop-1] INFO  com.mchange.v2.log.MLog:80  - MLog clients using log4j logging.
+2016-09-03 21:16:41  48   [localhost-startStop-1] INFO  com.mchange.v2.c3p0.C3P0Registry:204  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2016-09-03 21:16:41  92   [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:105  - Before LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{}
+2016-09-03 21:16:41  200  [localhost-startStop-1] INFO  org.hibernate.annotations.common.Version:37  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-09-03 21:16:41  207  [localhost-startStop-1] INFO  org.hibernate.Version:41  - HHH000412: Hibernate Core {4.2.21.Final}
+2016-09-03 21:16:41  210  [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:238  - HHH000206: hibernate.properties not found
+2016-09-03 21:16:41  212  [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:345  - HHH000021: Bytecode provider name : javassist
+2016-09-03 21:16:41  232  [localhost-startStop-1] INFO  org.hibernate.ejb.Ejb3Configuration:530  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-03 21:16:41  328  [localhost-startStop-1] INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator:188  - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-09-03 21:16:41  407  [localhost-startStop-1] INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource:462  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 10, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgfelb9i1un8axsmvawp2|7bf33bdc, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.fabric.jdbc.FabricMySQLDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgfelb9i1un8axsmvawp2|7bf33bdc, idleConnectionTestPeriod -> 30, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql:fabric://s1.rds.sdp.nd:32271/dev_mysql_niceapi?fabricServerGroup=my_group_s1_3306&fabricUsername=admin&fabricPassword=ZB5dGGTJtsC8t7OQ&autoReconnect=true&useUnicode=true&characterEncoding=UTF8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 120, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 30, numHelperThreads -> 100, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> select 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2016-09-03 21:16:42  756  [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect:130  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-03 21:16:42  767  [localhost-startStop-1] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder:120  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-09-03 21:16:42  897  [localhost-startStop-1] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator:73  - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-09-03 21:16:42  905  [localhost-startStop-1] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory:48  - HHH000397: Using ASTQueryTranslatorFactory
+2016-09-03 21:16:42  1178 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:207  - HHH000228: Running hbm2ddl schema update
+2016-09-03 21:16:42  1179 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:218  - HHH000102: Fetching database metadata
+2016-09-03 21:16:42  1185 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:230  - HHH000396: Updating schema
+2016-09-03 21:16:42  1224 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.book
+2016-09-03 21:16:42  1225 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [id, author, name]
+2016-09-03 21:16:42  1225 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-03 21:16:42  1226 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2016-09-03 21:16:42  1227 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:267  - HHH000232: Schema update complete
+2016-09-03 21:16:42  1266 [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:107  - After LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, hibernate.hbm2ddl.auto=update, hibernate.show_sql=true}
+2016-09-03 21:20:55  0    [localhost-startStop-1] INFO  com.mchange.v2.log.MLog:80  - MLog clients using log4j logging.
+2016-09-03 21:20:55  23   [localhost-startStop-1] INFO  com.mchange.v2.c3p0.C3P0Registry:204  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2016-09-03 21:20:55  92   [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:105  - Before LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{}
+2016-09-03 21:20:55  202  [localhost-startStop-1] INFO  org.hibernate.annotations.common.Version:37  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-09-03 21:20:55  209  [localhost-startStop-1] INFO  org.hibernate.Version:41  - HHH000412: Hibernate Core {4.2.21.Final}
+2016-09-03 21:20:55  212  [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:238  - HHH000206: hibernate.properties not found
+2016-09-03 21:20:55  214  [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:345  - HHH000021: Bytecode provider name : javassist
+2016-09-03 21:20:55  234  [localhost-startStop-1] INFO  org.hibernate.ejb.Ejb3Configuration:530  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-03 21:20:55  328  [localhost-startStop-1] INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator:188  - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-09-03 21:20:55  394  [localhost-startStop-1] INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource:462  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 10, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgfelb9i1undqz61oat9ks|32b0c37e, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.fabric.jdbc.FabricMySQLDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgfelb9i1undqz61oat9ks|32b0c37e, idleConnectionTestPeriod -> 30, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql:fabric://s1.rds.sdp.nd:32271/dev_mysql_niceapi?fabricServerGroup=my_group_s1_3306&fabricUsername=admin&fabricPassword=ZB5dGGTJtsC8t7OQ&autoReconnect=true&useUnicode=true&characterEncoding=UTF8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 120, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 30, numHelperThreads -> 100, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> select 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2016-09-03 21:20:56  694  [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect:130  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-03 21:20:56  703  [localhost-startStop-1] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder:120  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-09-03 21:20:56  797  [localhost-startStop-1] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator:73  - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-09-03 21:20:56  801  [localhost-startStop-1] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory:48  - HHH000397: Using ASTQueryTranslatorFactory
+2016-09-03 21:20:56  964  [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:207  - HHH000228: Running hbm2ddl schema update
+2016-09-03 21:20:56  964  [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:218  - HHH000102: Fetching database metadata
+2016-09-03 21:20:56  971  [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:230  - HHH000396: Updating schema
+2016-09-03 21:20:56  1009 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.book
+2016-09-03 21:20:56  1009 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [id, author, name]
+2016-09-03 21:20:56  1010 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-03 21:20:56  1010 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2016-09-03 21:20:56  1011 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:267  - HHH000232: Schema update complete
+2016-09-03 21:20:56  1042 [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:107  - After LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, hibernate.hbm2ddl.auto=update, hibernate.show_sql=true}
+2016-09-03 21:36:47  0    [localhost-startStop-1] INFO  com.mchange.v2.log.MLog:80  - MLog clients using log4j logging.
+2016-09-03 21:36:47  23   [localhost-startStop-1] INFO  com.mchange.v2.c3p0.C3P0Registry:204  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2016-09-03 21:36:47  94   [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:112  - Before LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{}
+2016-09-03 21:36:47  206  [localhost-startStop-1] INFO  org.hibernate.annotations.common.Version:37  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-09-03 21:36:47  213  [localhost-startStop-1] INFO  org.hibernate.Version:41  - HHH000412: Hibernate Core {4.2.21.Final}
+2016-09-03 21:36:47  216  [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:238  - HHH000206: hibernate.properties not found
+2016-09-03 21:36:47  217  [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:345  - HHH000021: Bytecode provider name : javassist
+2016-09-03 21:36:47  237  [localhost-startStop-1] INFO  org.hibernate.ejb.Ejb3Configuration:530  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-03 21:36:48  331  [localhost-startStop-1] INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator:188  - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-09-03 21:36:48  396  [localhost-startStop-1] INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource:462  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 10, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgfelb9i1uny5r519qo5tc|3d261e79, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.fabric.jdbc.FabricMySQLDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgfelb9i1uny5r519qo5tc|3d261e79, idleConnectionTestPeriod -> 30, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql:fabric://s1.rds.sdp.nd:32271/dev_mysql_niceapi?fabricServerGroup=my_group_s1_3306&fabricUsername=admin&fabricPassword=ZB5dGGTJtsC8t7OQ&autoReconnect=true&useUnicode=true&characterEncoding=UTF8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 120, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 30, numHelperThreads -> 100, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> select 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2016-09-03 21:36:48  720  [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect:130  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-03 21:36:48  730  [localhost-startStop-1] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder:120  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-09-03 21:36:48  822  [localhost-startStop-1] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator:73  - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-09-03 21:36:48  828  [localhost-startStop-1] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory:48  - HHH000397: Using ASTQueryTranslatorFactory
+2016-09-03 21:36:48  991  [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:207  - HHH000228: Running hbm2ddl schema update
+2016-09-03 21:36:48  992  [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:218  - HHH000102: Fetching database metadata
+2016-09-03 21:36:48  998  [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:230  - HHH000396: Updating schema
+2016-09-03 21:36:48  1035 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.book
+2016-09-03 21:36:48  1036 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [id, author, name]
+2016-09-03 21:36:48  1037 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-03 21:36:48  1037 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2016-09-03 21:36:48  1038 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:267  - HHH000232: Schema update complete
+2016-09-03 21:36:48  1070 [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:114  - After LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, hibernate.hbm2ddl.auto=update, hibernate.show_sql=true}

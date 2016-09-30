@@ -1,0 +1,1081 @@
+2016-09-08 14:43:32  0    [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader:305  - Root WebApplicationContext: initialization started
+2016-09-08 14:43:32  5    [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:581  - Refreshing Root WebApplicationContext: startup date [Thu Sep 08 14:43:32 CST 2016]; root of context hierarchy
+2016-09-08 14:43:33  47   [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:207  - Registering annotated classes: [class com.nd.config.ApiSecurityConfig]
+2016-09-08 14:43:33  209  [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'bearerAuthorizationProvider' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.nd.gaea.client.WafClientConfiguration; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.gaea.client.WafClientConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.ApiSecurityConfig]
+2016-09-08 14:43:33  210  [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'wafErrorResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.nd.gaea.rest.config.WafConfiguration; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.gaea.rest.config.WafConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.ApiSecurityConfig]
+2016-09-08 14:43:33  301  [localhost-startStop-1] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:155  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-09-08 14:43:33  868  [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/$waf/**'], []
+2016-09-08 14:43:33  868  [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-08 14:43:33  868  [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-08 14:43:33  882  [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.SecurityContextPersistenceFilter@3c3199d6, com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter@56e6c4ff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@488f6deb, org.springframework.security.web.session.SessionManagementFilter@3685a260, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@75f5a6e3]
+2016-09-08 14:43:33  1028 [localhost-startStop-1] INFO  com.nd.gaea.rest.config.WafPropertiesListener:32  - -- listing properties --
+waf.cors.allow.origin=*
+waf.client.bearerToken.account.username=qcqh_xqx
+waf.nonce.cache.expire=5
+waf.cors.allow.headers=Origin, Accept, X-Requested-With, Con...
+waf.uc.api.refresh_token=tokens/{refresh_token}/actions/refresh
+waf.exception.remote.httpstatus.proxy=false
+waf.client.maxPerRoute=500
+waf.organization.cache.maxSize=2000
+waf.uc.cache.expire=20
+waf.client.maxTotal=1000
+waf.uc.cache.maxSize=10000
+waf.trace.enabled=true
+waf.client.connectTimeout=5000
+waf.cors.max.age=1800
+waf.macToken.cache.maxSize=10000
+waf.bearerToken.cache.maxSize=1000
+waf.macToken.cache.expire=120
+waf.organization.cache.expire=365
+waf.client.socketTimeout=60000
+waf.environment=development
+waf.uc.realm=
+waf.bearerToken.cache.expire=1440
+waf.cors.allow.methods=GET, POST, HEAD, OPTIONS, PUT, DELETE...
+waf.client.bearerToken.account.password=0bee1cf8373c885ed3110e4e871cbca3
+waf.uc.api.post_bearer_token=bearer_tokens
+waf.uc.uri=https://ucbetapi.101.com/v0.93/
+
+2016-09-08 14:43:33  1030 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader:345  - Root WebApplicationContext: initialization completed in 1028 ms
+2016-09-08 14:43:34  1057 [localhost-startStop-1] INFO  org.springframework.web.servlet.DispatcherServlet:489  - FrameworkServlet 'dispatcher': initialization started
+2016-09-08 14:43:34  1059 [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:581  - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Sep 08 14:43:34 CST 2016]; parent: Root WebApplicationContext
+2016-09-08 14:43:34  1060 [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:207  - Registering annotated classes: [class com.nd.config.WebMvcConfig]
+2016-09-08 14:43:34  1377 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate:166  - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-08 14:43:34  1478 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'wafErrorResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/config/ApiSecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafConfiguration; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafConfiguration.class]]
+2016-09-08 14:43:34  1479 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'bearerAuthorizationProvider' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/config/ApiSecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafClientConfiguration; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/client/WafClientConfiguration.class]]
+2016-09-08 14:43:34  1482 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration]
+2016-09-08 14:43:34  1483 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'visitorsSecurityInterceptor' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=visitorsSecurityInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=visitorsSecurityInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-08 14:43:34  1484 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'serverTraceInterceptor' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=serverTraceInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=serverTraceInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-08 14:43:34  1484 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'multipartResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=multipartResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=multipartResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-08 14:43:34  1484 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-08 14:43:34  1490 [localhost-startStop-1] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317  - Loading XML bean definitions from class path resource [spring/applicationContext.mongodb.xml]
+2016-09-08 14:43:34  1619 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate:166  - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-08 14:43:34  1686 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.nd.repository.BookRepository.
+2016-09-08 14:43:34  1732 [localhost-startStop-1] INFO  org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172  - Loading properties file from class path resource [config/jdbc.properties]
+2016-09-08 14:43:34  1746 [localhost-startStop-1] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:155  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-09-08 14:43:35  2067 [localhost-startStop-1] INFO  com.mchange.v2.log.MLog:80  - MLog clients using log4j logging.
+2016-09-08 14:43:35  2086 [localhost-startStop-1] INFO  com.mchange.v2.c3p0.C3P0Registry:204  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2016-09-08 14:43:35  2185 [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:112  - Before LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{}
+2016-09-08 14:43:35  2189 [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:334  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-08 14:43:35  2320 [localhost-startStop-1] INFO  org.hibernate.annotations.common.Version:37  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-09-08 14:43:35  2325 [localhost-startStop-1] INFO  org.hibernate.Version:41  - HHH000412: Hibernate Core {4.2.21.Final}
+2016-09-08 14:43:35  2329 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:238  - HHH000206: hibernate.properties not found
+2016-09-08 14:43:35  2332 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:345  - HHH000021: Bytecode provider name : javassist
+2016-09-08 14:43:35  2363 [localhost-startStop-1] INFO  org.hibernate.ejb.Ejb3Configuration:530  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-08 14:43:35  2474 [localhost-startStop-1] INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator:188  - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-09-08 14:43:35  2536 [localhost-startStop-1] INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource:462  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 10, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgfelb9j2d9ywp10vx9d|7c2328eb, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.fabric.jdbc.FabricMySQLDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgfelb9j2d9ywp10vx9d|7c2328eb, idleConnectionTestPeriod -> 30, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql:fabric://s1.rds.sdp.nd:32271/dev_mysql_niceapi?fabricServerGroup=my_group_s1_3306&fabricUsername=admin&fabricPassword=ZB5dGGTJtsC8t7OQ&autoReconnect=true&useUnicode=true&characterEncoding=UTF8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 120, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 30, numHelperThreads -> 100, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> select 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2016-09-08 14:43:35  2804 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect:130  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-08 14:43:35  2816 [localhost-startStop-1] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder:120  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-09-08 14:43:35  2929 [localhost-startStop-1] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator:73  - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-09-08 14:43:35  2936 [localhost-startStop-1] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory:48  - HHH000397: Using ASTQueryTranslatorFactory
+2016-09-08 14:43:35  2988 [localhost-startStop-1] INFO  org.hibernate.validator.internal.util.Version:27  - HV000001: Hibernate Validator 5.0.1.Final
+2016-09-08 14:43:36  3245 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:207  - HHH000228: Running hbm2ddl schema update
+2016-09-08 14:43:36  3245 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:218  - HHH000102: Fetching database metadata
+2016-09-08 14:43:36  3252 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:230  - HHH000396: Updating schema
+2016-09-08 14:43:36  3285 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.book
+2016-09-08 14:43:36  3285 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [id, author, name]
+2016-09-08 14:43:36  3286 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-08 14:43:36  3286 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2016-09-08 14:43:36  3287 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:267  - HHH000232: Schema update complete
+2016-09-08 14:43:36  3320 [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:382  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-08 14:43:36  3322 [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:114  - After LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, hibernate.hbm2ddl.auto=update, hibernate.show_sql=true}
+2016-09-08 14:43:36  3445 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/$waf/**'], []
+2016-09-08 14:43:36  3445 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-08 14:43:36  3445 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-08 14:43:36  3448 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.SecurityContextPersistenceFilter@51147380, com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter@54d0b863, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52f99715, org.springframework.security.web.session.SessionManagementFilter@56d55a31, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7ebda5ce]
+2016-09-08 14:43:36  3610 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/books/error],methods=[GET]}" onto public java.lang.Object com.nd.controller.BookController.throwException(java.lang.String)
+2016-09-08 14:43:36  3611 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/books/valid],methods=[POST]}" onto public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User)
+2016-09-08 14:43:36  3611 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/books/all],methods=[GET]}" onto public java.lang.Object com.nd.controller.BookController.getAll()
+2016-09-08 14:43:36  3611 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/books/token],methods=[GET]}" onto public java.lang.Object com.nd.controller.BookController.getToken()
+2016-09-08 14:43:36  3612 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/{accessKey}/trace/{value}],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.trace(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2016-09-08 14:43:36  3613 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/{accessKey}/info],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.info(java.lang.String,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2016-09-08 14:43:36  3613 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/check/zipkin],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.checkZipkin(javax.servlet.http.HttpServletResponse) throws java.io.IOException,java.lang.InterruptedException
+2016-09-08 14:43:36  3647 [localhost-startStop-1] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:354  - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-08 14:43:36  3710 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Sep 08 14:43:34 CST 2016]; parent: Root WebApplicationContext
+2016-09-08 14:43:36  3958 [localhost-startStop-1] INFO  org.springframework.web.servlet.DispatcherServlet:508  - FrameworkServlet 'dispatcher': initialization completed in 2901 ms
+2016-09-08 14:44:24  51176 [http-bio-80-exec-1] ERROR com.nd.gaea.rest.exceptions.WafRestErrorResolver:57  - Request method 'GET' not supported
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:207)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:374)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:314)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:61)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:351)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1131)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:936)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter.doFilterInternal(TokenAuthenticationProcessFilter.java:86)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafHttpMethodOverrideFilter.doFilterInternal(WafHttpMethodOverrideFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafCorsFilter.doFilterInternal(WafCorsFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.ExceptionFilter.doFilterInternal(ExceptionFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2016-09-08 14:45:14  101476 [http-bio-80-exec-5] ERROR com.nd.gaea.rest.exceptions.WafRestErrorResolver:57  - org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'user' on field 'name': rejected value [null]; codes [NotBlank.user.name,NotBlank.name,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.name,name]; arguments []; default message [name]]; default message [不能为空]
+org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'user' on field 'name': rejected value [null]; codes [NotBlank.user.name,NotBlank.name,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.name,name]; arguments []; default message [name]]; default message [不能为空]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:118)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:128)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter.doFilterInternal(TokenAuthenticationProcessFilter.java:86)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafHttpMethodOverrideFilter.doFilterInternal(WafHttpMethodOverrideFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafCorsFilter.doFilterInternal(WafCorsFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.ExceptionFilter.doFilterInternal(ExceptionFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2016-09-08 14:46:09  0    [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader:305  - Root WebApplicationContext: initialization started
+2016-09-08 14:46:09  4    [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:581  - Refreshing Root WebApplicationContext: startup date [Thu Sep 08 14:46:09 CST 2016]; root of context hierarchy
+2016-09-08 14:46:09  35   [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:207  - Registering annotated classes: [class com.nd.config.ApiSecurityConfig]
+2016-09-08 14:46:09  190  [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'bearerAuthorizationProvider' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.nd.gaea.client.WafClientConfiguration; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.gaea.client.WafClientConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.ApiSecurityConfig]
+2016-09-08 14:46:09  191  [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'wafErrorResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.nd.gaea.rest.config.WafConfiguration; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.gaea.rest.config.WafConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.ApiSecurityConfig]
+2016-09-08 14:46:10  282  [localhost-startStop-1] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:155  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-09-08 14:46:10  904  [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/$waf/**'], []
+2016-09-08 14:46:10  905  [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-08 14:46:10  905  [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-08 14:46:10  919  [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.SecurityContextPersistenceFilter@31cd4dcc, com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter@23b327d0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46fadaff, org.springframework.security.web.session.SessionManagementFilter@576ffeb4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4952aafa]
+2016-09-08 14:46:10  1075 [localhost-startStop-1] INFO  com.nd.gaea.rest.config.WafPropertiesListener:32  - -- listing properties --
+waf.cors.allow.origin=*
+waf.client.bearerToken.account.username=qcqh_xqx
+waf.nonce.cache.expire=5
+waf.cors.allow.headers=Origin, Accept, X-Requested-With, Con...
+waf.uc.api.refresh_token=tokens/{refresh_token}/actions/refresh
+waf.exception.remote.httpstatus.proxy=false
+waf.client.maxPerRoute=500
+waf.organization.cache.maxSize=2000
+waf.uc.cache.expire=20
+waf.client.maxTotal=1000
+waf.uc.cache.maxSize=10000
+waf.trace.enabled=true
+waf.client.connectTimeout=5000
+waf.cors.max.age=1800
+waf.macToken.cache.maxSize=10000
+waf.bearerToken.cache.maxSize=1000
+waf.macToken.cache.expire=120
+waf.organization.cache.expire=365
+waf.client.socketTimeout=60000
+waf.environment=development
+waf.uc.realm=
+waf.bearerToken.cache.expire=1440
+waf.cors.allow.methods=GET, POST, HEAD, OPTIONS, PUT, DELETE...
+waf.client.bearerToken.account.password=0bee1cf8373c885ed3110e4e871cbca3
+waf.uc.api.post_bearer_token=bearer_tokens
+waf.uc.uri=https://ucbetapi.101.com/v0.93/
+
+2016-09-08 14:46:10  1077 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader:345  - Root WebApplicationContext: initialization completed in 1075 ms
+2016-09-08 14:46:10  1102 [localhost-startStop-1] INFO  org.springframework.web.servlet.DispatcherServlet:489  - FrameworkServlet 'dispatcher': initialization started
+2016-09-08 14:46:10  1104 [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:581  - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Sep 08 14:46:10 CST 2016]; parent: Root WebApplicationContext
+2016-09-08 14:46:10  1105 [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:207  - Registering annotated classes: [class com.nd.config.WebMvcConfig]
+2016-09-08 14:46:11  1381 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate:166  - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-08 14:46:11  1490 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'wafErrorResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/config/ApiSecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafConfiguration; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafConfiguration.class]]
+2016-09-08 14:46:11  1491 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'bearerAuthorizationProvider' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/config/ApiSecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafClientConfiguration; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/client/WafClientConfiguration.class]]
+2016-09-08 14:46:11  1492 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration]
+2016-09-08 14:46:11  1496 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'multipartResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=multipartResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=multipartResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-08 14:46:11  1497 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-08 14:46:11  1497 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'visitorsSecurityInterceptor' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=visitorsSecurityInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=visitorsSecurityInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-08 14:46:11  1498 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'serverTraceInterceptor' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=serverTraceInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=serverTraceInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-08 14:46:11  1503 [localhost-startStop-1] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317  - Loading XML bean definitions from class path resource [spring/applicationContext.mongodb.xml]
+2016-09-08 14:46:11  1627 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate:166  - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-08 14:46:11  1704 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.nd.repository.BookRepository.
+2016-09-08 14:46:11  1752 [localhost-startStop-1] INFO  org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172  - Loading properties file from class path resource [config/jdbc.properties]
+2016-09-08 14:46:11  1766 [localhost-startStop-1] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:155  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-09-08 14:46:11  2143 [localhost-startStop-1] INFO  com.mchange.v2.log.MLog:80  - MLog clients using log4j logging.
+2016-09-08 14:46:11  2162 [localhost-startStop-1] INFO  com.mchange.v2.c3p0.C3P0Registry:204  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2016-09-08 14:46:12  2214 [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:112  - Before LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{}
+2016-09-08 14:46:12  2219 [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:334  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-08 14:46:12  2304 [localhost-startStop-1] INFO  org.hibernate.annotations.common.Version:37  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-09-08 14:46:12  2309 [localhost-startStop-1] INFO  org.hibernate.Version:41  - HHH000412: Hibernate Core {4.2.21.Final}
+2016-09-08 14:46:12  2310 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:238  - HHH000206: hibernate.properties not found
+2016-09-08 14:46:12  2312 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:345  - HHH000021: Bytecode provider name : javassist
+2016-09-08 14:46:12  2327 [localhost-startStop-1] INFO  org.hibernate.ejb.Ejb3Configuration:530  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-08 14:46:12  2403 [localhost-startStop-1] INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator:188  - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-09-08 14:46:12  2458 [localhost-startStop-1] INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource:462  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 10, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgfelb9j2ddbzi1uiyaut|5974b6e6, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.fabric.jdbc.FabricMySQLDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgfelb9j2ddbzi1uiyaut|5974b6e6, idleConnectionTestPeriod -> 30, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql:fabric://s1.rds.sdp.nd:32271/dev_mysql_niceapi?fabricServerGroup=my_group_s1_3306&fabricUsername=admin&fabricPassword=ZB5dGGTJtsC8t7OQ&autoReconnect=true&useUnicode=true&characterEncoding=UTF8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 120, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 30, numHelperThreads -> 100, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> select 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2016-09-08 14:46:12  2715 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect:130  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-08 14:46:12  2722 [localhost-startStop-1] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder:120  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-09-08 14:46:12  2795 [localhost-startStop-1] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator:73  - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-09-08 14:46:12  2799 [localhost-startStop-1] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory:48  - HHH000397: Using ASTQueryTranslatorFactory
+2016-09-08 14:46:12  2836 [localhost-startStop-1] INFO  org.hibernate.validator.internal.util.Version:27  - HV000001: Hibernate Validator 5.0.1.Final
+2016-09-08 14:46:12  3036 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:207  - HHH000228: Running hbm2ddl schema update
+2016-09-08 14:46:12  3036 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:218  - HHH000102: Fetching database metadata
+2016-09-08 14:46:12  3041 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:230  - HHH000396: Updating schema
+2016-09-08 14:46:12  3075 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.book
+2016-09-08 14:46:12  3075 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [id, author, name]
+2016-09-08 14:46:12  3076 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-08 14:46:12  3076 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2016-09-08 14:46:12  3077 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:267  - HHH000232: Schema update complete
+2016-09-08 14:46:12  3102 [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:382  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-08 14:46:12  3104 [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:114  - After LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, hibernate.hbm2ddl.auto=update, hibernate.show_sql=true}
+2016-09-08 14:46:13  3218 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/$waf/**'], []
+2016-09-08 14:46:13  3218 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-08 14:46:13  3218 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-08 14:46:13  3221 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.SecurityContextPersistenceFilter@3cb91c09, com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter@2f9d9248, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11eecd64, org.springframework.security.web.session.SessionManagementFilter@6178b8fd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5a379fc]
+2016-09-08 14:46:13  3386 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/books/error],methods=[GET]}" onto public java.lang.Object com.nd.controller.BookController.throwException(java.lang.String)
+2016-09-08 14:46:13  3387 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/books/valid],methods=[POST]}" onto public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User)
+2016-09-08 14:46:13  3388 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/books/all],methods=[GET]}" onto public java.lang.Object com.nd.controller.BookController.getAll()
+2016-09-08 14:46:13  3388 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/books/token],methods=[GET]}" onto public java.lang.Object com.nd.controller.BookController.getToken()
+2016-09-08 14:46:13  3389 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/{accessKey}/trace/{value}],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.trace(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2016-09-08 14:46:13  3389 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/{accessKey}/info],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.info(java.lang.String,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2016-09-08 14:46:13  3390 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/check/zipkin],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.checkZipkin(javax.servlet.http.HttpServletResponse) throws java.io.IOException,java.lang.InterruptedException
+2016-09-08 14:46:13  3423 [localhost-startStop-1] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:354  - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-08 14:46:13  3483 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Sep 08 14:46:10 CST 2016]; parent: Root WebApplicationContext
+2016-09-08 14:46:13  3731 [localhost-startStop-1] INFO  org.springframework.web.servlet.DispatcherServlet:508  - FrameworkServlet 'dispatcher': initialization completed in 2629 ms
+2016-09-08 14:46:31  21907 [http-bio-80-exec-1] ERROR com.nd.gaea.rest.exceptions.WafRestErrorResolver:57  - Validation failed for argument at index 0 in method: public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User), with 1 error(s): [Field error in object 'user' on field 'name': rejected value [null]; codes [NotBlank.user.name,NotBlank.name,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.name,name]; arguments []; default message [name]]; default message [不能为空]] 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument at index 0 in method: public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User), with 1 error(s): [Field error in object 'user' on field 'name': rejected value [null]; codes [NotBlank.user.name,NotBlank.name,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.name,name]; arguments []; default message [name]]; default message [不能为空]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:134)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:128)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter.doFilterInternal(TokenAuthenticationProcessFilter.java:86)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafHttpMethodOverrideFilter.doFilterInternal(WafHttpMethodOverrideFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafCorsFilter.doFilterInternal(WafCorsFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.ExceptionFilter.doFilterInternal(ExceptionFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2016-09-08 14:52:59  0    [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader:305  - Root WebApplicationContext: initialization started
+2016-09-08 14:52:59  4    [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:581  - Refreshing Root WebApplicationContext: startup date [Thu Sep 08 14:52:59 CST 2016]; root of context hierarchy
+2016-09-08 14:52:59  33   [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:207  - Registering annotated classes: [class com.nd.config.ApiSecurityConfig]
+2016-09-08 14:52:59  194  [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'bearerAuthorizationProvider' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.nd.gaea.client.WafClientConfiguration; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.gaea.client.WafClientConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.ApiSecurityConfig]
+2016-09-08 14:52:59  195  [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'wafErrorResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.nd.gaea.rest.config.WafConfiguration; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.gaea.rest.config.WafConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.ApiSecurityConfig]
+2016-09-08 14:53:00  285  [localhost-startStop-1] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:155  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-09-08 14:53:00  882  [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/$waf/**'], []
+2016-09-08 14:53:00  883  [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-08 14:53:00  883  [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-08 14:53:00  895  [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.SecurityContextPersistenceFilter@20da08f9, com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter@7ebe78cc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@aecda16, org.springframework.security.web.session.SessionManagementFilter@5b61821d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5543812f]
+2016-09-08 14:53:00  1041 [localhost-startStop-1] INFO  com.nd.gaea.rest.config.WafPropertiesListener:32  - -- listing properties --
+waf.cors.allow.origin=*
+waf.client.bearerToken.account.username=qcqh_xqx
+waf.nonce.cache.expire=5
+waf.cors.allow.headers=Origin, Accept, X-Requested-With, Con...
+waf.uc.api.refresh_token=tokens/{refresh_token}/actions/refresh
+waf.exception.remote.httpstatus.proxy=false
+waf.client.maxPerRoute=500
+waf.organization.cache.maxSize=2000
+waf.uc.cache.expire=20
+waf.client.maxTotal=1000
+waf.uc.cache.maxSize=10000
+waf.trace.enabled=true
+waf.client.connectTimeout=5000
+waf.cors.max.age=1800
+waf.macToken.cache.maxSize=10000
+waf.bearerToken.cache.maxSize=1000
+waf.macToken.cache.expire=120
+waf.organization.cache.expire=365
+waf.client.socketTimeout=60000
+waf.environment=development
+waf.uc.realm=
+waf.bearerToken.cache.expire=1440
+waf.cors.allow.methods=GET, POST, HEAD, OPTIONS, PUT, DELETE...
+waf.client.bearerToken.account.password=0bee1cf8373c885ed3110e4e871cbca3
+waf.uc.api.post_bearer_token=bearer_tokens
+waf.uc.uri=https://ucbetapi.101.com/v0.93/
+
+2016-09-08 14:53:00  1043 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader:345  - Root WebApplicationContext: initialization completed in 1042 ms
+2016-09-08 14:53:00  1067 [localhost-startStop-1] INFO  org.springframework.web.servlet.DispatcherServlet:489  - FrameworkServlet 'dispatcher': initialization started
+2016-09-08 14:53:00  1069 [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:581  - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Sep 08 14:53:00 CST 2016]; parent: Root WebApplicationContext
+2016-09-08 14:53:00  1070 [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:207  - Registering annotated classes: [class com.nd.config.WebMvcConfig]
+2016-09-08 14:53:01  1406 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate:166  - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-08 14:53:01  1509 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'wafErrorResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/config/ApiSecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafConfiguration; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafConfiguration.class]]
+2016-09-08 14:53:01  1510 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'bearerAuthorizationProvider' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/config/ApiSecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafClientConfiguration; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/client/WafClientConfiguration.class]]
+2016-09-08 14:53:01  1513 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration]
+2016-09-08 14:53:01  1514 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'visitorsSecurityInterceptor' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=visitorsSecurityInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=visitorsSecurityInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-08 14:53:01  1514 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'serverTraceInterceptor' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=serverTraceInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=serverTraceInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-08 14:53:01  1515 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'multipartResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=multipartResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=multipartResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-08 14:53:01  1515 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-08 14:53:01  1524 [localhost-startStop-1] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317  - Loading XML bean definitions from class path resource [spring/applicationContext.mongodb.xml]
+2016-09-08 14:53:01  1653 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate:166  - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-08 14:53:01  1723 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.nd.repository.BookRepository.
+2016-09-08 14:53:01  1768 [localhost-startStop-1] INFO  org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172  - Loading properties file from class path resource [config/jdbc.properties]
+2016-09-08 14:53:01  1781 [localhost-startStop-1] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:155  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-09-08 14:53:01  2120 [localhost-startStop-1] INFO  com.mchange.v2.log.MLog:80  - MLog clients using log4j logging.
+2016-09-08 14:53:01  2138 [localhost-startStop-1] INFO  com.mchange.v2.c3p0.C3P0Registry:204  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2016-09-08 14:53:01  2190 [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:112  - Before LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{}
+2016-09-08 14:53:01  2194 [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:334  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-08 14:53:02  2277 [localhost-startStop-1] INFO  org.hibernate.annotations.common.Version:37  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-09-08 14:53:02  2281 [localhost-startStop-1] INFO  org.hibernate.Version:41  - HHH000412: Hibernate Core {4.2.21.Final}
+2016-09-08 14:53:02  2283 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:238  - HHH000206: hibernate.properties not found
+2016-09-08 14:53:02  2285 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:345  - HHH000021: Bytecode provider name : javassist
+2016-09-08 14:53:02  2300 [localhost-startStop-1] INFO  org.hibernate.ejb.Ejb3Configuration:530  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-08 14:53:02  2378 [localhost-startStop-1] INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator:188  - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-09-08 14:53:02  2430 [localhost-startStop-1] INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource:462  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 10, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgfelb9j2dm4a2ig3ndx|207da3e8, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.fabric.jdbc.FabricMySQLDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgfelb9j2dm4a2ig3ndx|207da3e8, idleConnectionTestPeriod -> 30, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql:fabric://s1.rds.sdp.nd:32271/dev_mysql_niceapi?fabricServerGroup=my_group_s1_3306&fabricUsername=admin&fabricPassword=ZB5dGGTJtsC8t7OQ&autoReconnect=true&useUnicode=true&characterEncoding=UTF8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 120, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 30, numHelperThreads -> 100, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> select 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2016-09-08 14:53:02  2677 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect:130  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-08 14:53:02  2684 [localhost-startStop-1] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder:120  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-09-08 14:53:02  2757 [localhost-startStop-1] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator:73  - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-09-08 14:53:02  2760 [localhost-startStop-1] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory:48  - HHH000397: Using ASTQueryTranslatorFactory
+2016-09-08 14:53:02  2791 [localhost-startStop-1] INFO  org.hibernate.validator.internal.util.Version:27  - HV000001: Hibernate Validator 5.0.1.Final
+2016-09-08 14:53:02  2980 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:207  - HHH000228: Running hbm2ddl schema update
+2016-09-08 14:53:02  2981 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:218  - HHH000102: Fetching database metadata
+2016-09-08 14:53:02  2986 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:230  - HHH000396: Updating schema
+2016-09-08 14:53:02  3023 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.book
+2016-09-08 14:53:02  3023 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [id, author, name]
+2016-09-08 14:53:02  3024 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-08 14:53:02  3024 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2016-09-08 14:53:02  3025 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:267  - HHH000232: Schema update complete
+2016-09-08 14:53:02  3051 [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:382  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-08 14:53:02  3053 [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:114  - After LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, hibernate.hbm2ddl.auto=update, hibernate.show_sql=true}
+2016-09-08 14:53:02  3172 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/$waf/**'], []
+2016-09-08 14:53:02  3172 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-08 14:53:02  3172 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-08 14:53:02  3175 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.SecurityContextPersistenceFilter@3cb91c09, com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter@2f9d9248, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11eecd64, org.springframework.security.web.session.SessionManagementFilter@6178b8fd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5a379fc]
+2016-09-08 14:53:03  3340 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/books/error],methods=[GET]}" onto public java.lang.Object com.nd.controller.BookController.throwException(java.lang.String)
+2016-09-08 14:53:03  3341 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/books/valid],methods=[POST]}" onto public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User)
+2016-09-08 14:53:03  3341 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/books/all],methods=[GET]}" onto public java.lang.Object com.nd.controller.BookController.getAll()
+2016-09-08 14:53:03  3341 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/books/token],methods=[GET]}" onto public java.lang.Object com.nd.controller.BookController.getToken()
+2016-09-08 14:53:03  3342 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/{accessKey}/trace/{value}],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.trace(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2016-09-08 14:53:03  3342 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/{accessKey}/info],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.info(java.lang.String,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2016-09-08 14:53:03  3343 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/check/zipkin],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.checkZipkin(javax.servlet.http.HttpServletResponse) throws java.io.IOException,java.lang.InterruptedException
+2016-09-08 14:53:03  3374 [localhost-startStop-1] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:354  - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-08 14:53:03  3431 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Sep 08 14:53:00 CST 2016]; parent: Root WebApplicationContext
+2016-09-08 14:53:03  3671 [localhost-startStop-1] INFO  org.springframework.web.servlet.DispatcherServlet:508  - FrameworkServlet 'dispatcher': initialization completed in 2603 ms
+2016-09-08 14:53:12  13226 [http-bio-80-exec-1] ERROR com.nd.gaea.rest.exceptions.WafRestErrorResolver:57  - Validation failed for argument at index 0 in method: public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User), with 1 error(s): [Field error in object 'user' on field 'address': rejected value [sessiontest]; codes [Max.user.address,Max.address,Max.java.lang.String,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.address,address]; arguments []; default message [address],4]; default message [最大不能超过4]] 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument at index 0 in method: public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User), with 1 error(s): [Field error in object 'user' on field 'address': rejected value [sessiontest]; codes [Max.user.address,Max.address,Max.java.lang.String,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.address,address]; arguments []; default message [address],4]; default message [最大不能超过4]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:134)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:128)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter.doFilterInternal(TokenAuthenticationProcessFilter.java:86)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafHttpMethodOverrideFilter.doFilterInternal(WafHttpMethodOverrideFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafCorsFilter.doFilterInternal(WafCorsFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.ExceptionFilter.doFilterInternal(ExceptionFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2016-09-08 14:54:20  80859 [http-bio-80-exec-2] ERROR com.nd.gaea.rest.exceptions.WafRestErrorResolver:57  - Validation failed for argument at index 0 in method: public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User), with 1 error(s): [Field error in object 'user' on field 'address': rejected value [sess]; codes [Max.user.address,Max.address,Max.java.lang.String,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.address,address]; arguments []; default message [address],4]; default message [最大不能超过4]] 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument at index 0 in method: public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User), with 1 error(s): [Field error in object 'user' on field 'address': rejected value [sess]; codes [Max.user.address,Max.address,Max.java.lang.String,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.address,address]; arguments []; default message [address],4]; default message [最大不能超过4]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:134)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:128)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter.doFilterInternal(TokenAuthenticationProcessFilter.java:86)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafHttpMethodOverrideFilter.doFilterInternal(WafHttpMethodOverrideFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafCorsFilter.doFilterInternal(WafCorsFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.ExceptionFilter.doFilterInternal(ExceptionFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2016-09-08 14:54:39  99956 [http-bio-80-exec-3] ERROR com.nd.gaea.rest.exceptions.WafRestErrorResolver:57  - Validation failed for argument at index 0 in method: public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User), with 1 error(s): [Field error in object 'user' on field 'address': rejected value [ses]; codes [Max.user.address,Max.address,Max.java.lang.String,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.address,address]; arguments []; default message [address],4]; default message [最大不能超过4]] 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument at index 0 in method: public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User), with 1 error(s): [Field error in object 'user' on field 'address': rejected value [ses]; codes [Max.user.address,Max.address,Max.java.lang.String,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.address,address]; arguments []; default message [address],4]; default message [最大不能超过4]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:134)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:128)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter.doFilterInternal(TokenAuthenticationProcessFilter.java:86)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafHttpMethodOverrideFilter.doFilterInternal(WafHttpMethodOverrideFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafCorsFilter.doFilterInternal(WafCorsFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.ExceptionFilter.doFilterInternal(ExceptionFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2016-09-08 14:54:43  103777 [http-bio-80-exec-4] ERROR com.nd.gaea.rest.exceptions.WafRestErrorResolver:57  - Validation failed for argument at index 0 in method: public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User), with 1 error(s): [Field error in object 'user' on field 'address': rejected value [s]; codes [Max.user.address,Max.address,Max.java.lang.String,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.address,address]; arguments []; default message [address],4]; default message [最大不能超过4]] 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument at index 0 in method: public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User), with 1 error(s): [Field error in object 'user' on field 'address': rejected value [s]; codes [Max.user.address,Max.address,Max.java.lang.String,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.address,address]; arguments []; default message [address],4]; default message [最大不能超过4]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:134)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:128)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter.doFilterInternal(TokenAuthenticationProcessFilter.java:86)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafHttpMethodOverrideFilter.doFilterInternal(WafHttpMethodOverrideFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafCorsFilter.doFilterInternal(WafCorsFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.ExceptionFilter.doFilterInternal(ExceptionFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2016-09-08 14:54:56  117095 [http-bio-80-exec-5] ERROR com.nd.gaea.rest.exceptions.WafRestErrorResolver:57  - Validation failed for argument at index 0 in method: public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User), with 1 error(s): [Field error in object 'user' on field 'address': rejected value [s]; codes [Max.user.address,Max.address,Max.java.lang.String,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.address,address]; arguments []; default message [address],4]; default message [最大不能超过4]] 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument at index 0 in method: public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User), with 1 error(s): [Field error in object 'user' on field 'address': rejected value [s]; codes [Max.user.address,Max.address,Max.java.lang.String,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.address,address]; arguments []; default message [address],4]; default message [最大不能超过4]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:134)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:128)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter.doFilterInternal(TokenAuthenticationProcessFilter.java:86)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafHttpMethodOverrideFilter.doFilterInternal(WafHttpMethodOverrideFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafCorsFilter.doFilterInternal(WafCorsFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.ExceptionFilter.doFilterInternal(ExceptionFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2016-09-08 14:55:32  0    [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader:305  - Root WebApplicationContext: initialization started
+2016-09-08 14:55:32  3    [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:581  - Refreshing Root WebApplicationContext: startup date [Thu Sep 08 14:55:32 CST 2016]; root of context hierarchy
+2016-09-08 14:55:32  32   [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:207  - Registering annotated classes: [class com.nd.config.ApiSecurityConfig]
+2016-09-08 14:55:33  180  [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'bearerAuthorizationProvider' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.nd.gaea.client.WafClientConfiguration; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.gaea.client.WafClientConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.ApiSecurityConfig]
+2016-09-08 14:55:33  181  [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'wafErrorResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.nd.gaea.rest.config.WafConfiguration; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.gaea.rest.config.WafConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.ApiSecurityConfig]
+2016-09-08 14:55:33  274  [localhost-startStop-1] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:155  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-09-08 14:55:33  847  [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/$waf/**'], []
+2016-09-08 14:55:33  847  [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-08 14:55:33  848  [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-08 14:55:33  860  [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.SecurityContextPersistenceFilter@10556e07, com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter@70eec0f4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4abe0d18, org.springframework.security.web.session.SessionManagementFilter@1f2cba39, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4ef31024]
+2016-09-08 14:55:33  1002 [localhost-startStop-1] INFO  com.nd.gaea.rest.config.WafPropertiesListener:32  - -- listing properties --
+waf.cors.allow.origin=*
+waf.client.bearerToken.account.username=qcqh_xqx
+waf.nonce.cache.expire=5
+waf.cors.allow.headers=Origin, Accept, X-Requested-With, Con...
+waf.uc.api.refresh_token=tokens/{refresh_token}/actions/refresh
+waf.exception.remote.httpstatus.proxy=false
+waf.client.maxPerRoute=500
+waf.organization.cache.maxSize=2000
+waf.uc.cache.expire=20
+waf.client.maxTotal=1000
+waf.uc.cache.maxSize=10000
+waf.trace.enabled=true
+waf.client.connectTimeout=5000
+waf.cors.max.age=1800
+waf.macToken.cache.maxSize=10000
+waf.bearerToken.cache.maxSize=1000
+waf.macToken.cache.expire=120
+waf.organization.cache.expire=365
+waf.client.socketTimeout=60000
+waf.environment=development
+waf.uc.realm=
+waf.bearerToken.cache.expire=1440
+waf.cors.allow.methods=GET, POST, HEAD, OPTIONS, PUT, DELETE...
+waf.client.bearerToken.account.password=0bee1cf8373c885ed3110e4e871cbca3
+waf.uc.api.post_bearer_token=bearer_tokens
+waf.uc.uri=https://ucbetapi.101.com/v0.93/
+
+2016-09-08 14:55:33  1004 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader:345  - Root WebApplicationContext: initialization completed in 1003 ms
+2016-09-08 14:55:33  1027 [localhost-startStop-1] INFO  org.springframework.web.servlet.DispatcherServlet:489  - FrameworkServlet 'dispatcher': initialization started
+2016-09-08 14:55:33  1029 [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:581  - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Sep 08 14:55:33 CST 2016]; parent: Root WebApplicationContext
+2016-09-08 14:55:33  1029 [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:207  - Registering annotated classes: [class com.nd.config.WebMvcConfig]
+2016-09-08 14:55:34  1316 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate:166  - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-08 14:55:34  1428 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'wafErrorResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/config/ApiSecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafConfiguration; factoryMethodName=wafErrorResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafConfiguration.class]]
+2016-09-08 14:55:34  1428 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'bearerAuthorizationProvider' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=apiSecurityConfig; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/config/ApiSecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafClientConfiguration; factoryMethodName=bearerAuthorizationProvider; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/client/WafClientConfiguration.class]]
+2016-09-08 14:55:34  1429 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration]
+2016-09-08 14:55:34  1431 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'multipartResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=multipartResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=multipartResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-08 14:55:34  1432 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-08 14:55:34  1433 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'visitorsSecurityInterceptor' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=visitorsSecurityInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=visitorsSecurityInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-08 14:55:34  1433 [localhost-startStop-1] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory:843  - Overriding bean definition for bean 'serverTraceInterceptor' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=wafWebMvcConfigurerAdapter; factoryMethodName=serverTraceInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/nd/gaea/rest/config/WafWebMvcConfigurerAdapter.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webMvcConfig; factoryMethodName=serverTraceInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in com.nd.config.WebMvcConfig]
+2016-09-08 14:55:34  1439 [localhost-startStop-1] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader:317  - Loading XML bean definitions from class path resource [spring/applicationContext.mongodb.xml]
+2016-09-08 14:55:34  1565 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate:166  - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-08 14:55:34  1641 [localhost-startStop-1] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport:283  - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.nd.repository.BookRepository.
+2016-09-08 14:55:34  1687 [localhost-startStop-1] INFO  org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:172  - Loading properties file from class path resource [config/jdbc.properties]
+2016-09-08 14:55:34  1700 [localhost-startStop-1] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor:155  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-09-08 14:55:34  2090 [localhost-startStop-1] INFO  com.mchange.v2.log.MLog:80  - MLog clients using log4j logging.
+2016-09-08 14:55:34  2109 [localhost-startStop-1] INFO  com.mchange.v2.c3p0.C3P0Registry:204  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2016-09-08 14:55:35  2161 [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:112  - Before LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{}
+2016-09-08 14:55:35  2165 [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:334  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-08 14:55:35  2247 [localhost-startStop-1] INFO  org.hibernate.annotations.common.Version:37  - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-09-08 14:55:35  2252 [localhost-startStop-1] INFO  org.hibernate.Version:41  - HHH000412: Hibernate Core {4.2.21.Final}
+2016-09-08 14:55:35  2253 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:238  - HHH000206: hibernate.properties not found
+2016-09-08 14:55:35  2255 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:345  - HHH000021: Bytecode provider name : javassist
+2016-09-08 14:55:35  2270 [localhost-startStop-1] INFO  org.hibernate.ejb.Ejb3Configuration:530  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-08 14:55:35  2345 [localhost-startStop-1] INFO  org.hibernate.service.jdbc.connections.internal.ConnectionProviderInitiator:188  - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2016-09-08 14:55:35  2396 [localhost-startStop-1] INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource:462  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 10, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgfelb9j2dpeel17gecy3|617d24ab, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.fabric.jdbc.FabricMySQLDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgfelb9j2dpeel17gecy3|617d24ab, idleConnectionTestPeriod -> 30, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql:fabric://s1.rds.sdp.nd:32271/dev_mysql_niceapi?fabricServerGroup=my_group_s1_3306&fabricUsername=admin&fabricPassword=ZB5dGGTJtsC8t7OQ&autoReconnect=true&useUnicode=true&characterEncoding=UTF8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 120, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 30, numHelperThreads -> 100, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> select 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2016-09-08 14:55:35  2639 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect:130  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-08 14:55:35  2645 [localhost-startStop-1] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder:120  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-09-08 14:55:35  2714 [localhost-startStop-1] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator:73  - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2016-09-08 14:55:35  2717 [localhost-startStop-1] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory:48  - HHH000397: Using ASTQueryTranslatorFactory
+2016-09-08 14:55:35  2749 [localhost-startStop-1] INFO  org.hibernate.validator.internal.util.Version:27  - HV000001: Hibernate Validator 5.0.1.Final
+2016-09-08 14:55:35  2932 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:207  - HHH000228: Running hbm2ddl schema update
+2016-09-08 14:55:35  2933 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:218  - HHH000102: Fetching database metadata
+2016-09-08 14:55:35  2938 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:230  - HHH000396: Updating schema
+2016-09-08 14:55:35  2979 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: dev_mysql_niceapi.book
+2016-09-08 14:55:35  2979 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [id, author, name]
+2016-09-08 14:55:35  2980 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2016-09-08 14:55:35  2980 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2016-09-08 14:55:35  2981 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:267  - HHH000232: Schema update complete
+2016-09-08 14:55:35  3005 [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:382  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-08 14:55:35  3006 [localhost-startStop-1] INFO  com.nd.config.WebMvcConfig:114  - After LocalContainerEntityManagerFactoryBean.afterPropertiesSet():::{hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, hibernate.hbm2ddl.auto=update, hibernate.show_sql=true}
+2016-09-08 14:55:35  3118 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/$waf/**'], []
+2016-09-08 14:55:35  3118 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-08 14:55:35  3118 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2016-09-08 14:55:35  3121 [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain:28  - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.SecurityContextPersistenceFilter@317611b1, com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter@71c9871f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65c63e95, org.springframework.security.web.session.SessionManagementFilter@7738ca7d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3693ba0]
+2016-09-08 14:55:36  3293 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/books/error],methods=[GET]}" onto public java.lang.Object com.nd.controller.BookController.throwException(java.lang.String)
+2016-09-08 14:55:36  3294 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/books/valid],methods=[POST]}" onto public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User)
+2016-09-08 14:55:36  3295 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/books/all],methods=[GET]}" onto public java.lang.Object com.nd.controller.BookController.getAll()
+2016-09-08 14:55:36  3295 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/books/token],methods=[GET]}" onto public java.lang.Object com.nd.controller.BookController.getToken()
+2016-09-08 14:55:36  3296 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/{accessKey}/trace/{value}],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.trace(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2016-09-08 14:55:36  3296 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/{accessKey}/info],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.info(java.lang.String,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2016-09-08 14:55:36  3296 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:543  - Mapped "{[/$waf/check/zipkin],methods=[GET]}" onto public void com.nd.gaea.rest.controller.WafController.checkZipkin(javax.servlet.http.HttpServletResponse) throws java.io.IOException,java.lang.InterruptedException
+2016-09-08 14:55:36  3330 [localhost-startStop-1] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:354  - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-08 14:55:36  3378 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:534  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Sep 08 14:55:33 CST 2016]; parent: Root WebApplicationContext
+2016-09-08 14:55:36  3620 [localhost-startStop-1] INFO  org.springframework.web.servlet.DispatcherServlet:508  - FrameworkServlet 'dispatcher': initialization completed in 2593 ms
+2016-09-08 14:55:46  13959 [http-bio-80-exec-2] ERROR com.nd.gaea.rest.exceptions.WafRestErrorResolver:57  - Validation failed for argument at index 0 in method: public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User), with 1 error(s): [Field error in object 'user' on field 'address': rejected value [null]; codes [NotBlank.user.address,NotBlank.address,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.address,address]; arguments []; default message [address]]; default message [不能为空]] 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument at index 0 in method: public java.lang.Object com.nd.controller.BookController.valid(com.nd.controller.User), with 1 error(s): [Field error in object 'user' on field 'address': rejected value [null]; codes [NotBlank.user.address,NotBlank.address,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.address,address]; arguments []; default message [address]]; default message [不能为空]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:134)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:128)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.nd.gaea.rest.filter.TokenAuthenticationProcessFilter.doFilterInternal(TokenAuthenticationProcessFilter.java:86)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafHttpMethodOverrideFilter.doFilterInternal(WafHttpMethodOverrideFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.WafCorsFilter.doFilterInternal(WafCorsFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.nd.gaea.rest.filter.ExceptionFilter.doFilterInternal(ExceptionFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
